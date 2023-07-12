@@ -13,7 +13,7 @@ export function Card({comanda, nome,image,email}: CardProps){
             <img src={image}/>
             <h2>{nome}</h2>
             <p><b>Email:</b>{email}</p>
-            <p><b>Comanda:</b>{comanda}</p> 
+            <p><b>Comanda: R$ </b>{comanda}</p> 
         </div>
     )
 }

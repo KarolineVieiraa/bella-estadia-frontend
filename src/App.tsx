@@ -4,6 +4,7 @@ import { Card } from './components/card/card'
 import { useHospedeData } from './hooks/useHospedeData';
 import { CreateModal } from './create-modal/create-modal';
 
+
 function App() {
   const {data} = useHospedeData();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,10 +18,10 @@ function App() {
       <div className="card-grid">
         {data?.map(hospedeData => 
           <Card 
-          comanda={hospedeData.comanda} 
           nome={hospedeData.nome} 
           email={hospedeData.email} 
-          image={hospedeData.image}
+          image={hospedeData.image}  
+          comanda={hospedeData.comanda}
           />
         )}
         

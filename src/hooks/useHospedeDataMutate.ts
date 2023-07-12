@@ -19,6 +19,6 @@ export function useHospedeDataMutate(){
         }
     })
 
-    return mutate
+    return mutate;
 
 }

@@ -29,7 +29,7 @@ export function CreateModal({closeModal}:ModalProps){
     const [email, setEmail] = useState("");
     const [image, setImage] = useState("");
     const [comanda, setComanda] = useState(0);
-    const {mutate, isSuccess}= useHospedeDataMutate();
+    const {mutate, isSuccess, isLoading}= useHospedeDataMutate();
 
     const submit =() =>{
         const hospedeData: HospedeData = {
@@ -56,7 +56,9 @@ export function CreateModal({closeModal}:ModalProps){
                     <Input label="Valor da comanda:" value={comanda} updateValue={setComanda}/>
 
                 </form>
-                <button onClick={submit} className="btn-secondary">Adicionar</button>
+                <button onClick={submit} className="btn-secondary">
+                    {isLoading ? "Adicionando..." : "Adicionar"}
+                </button>
             </div>
         
         </div>

@@ -53,7 +53,7 @@ export function CreateModal({closeModal}:ModalProps){
                     <Input label="Nome do hospede:" value={nome} updateValue={setNome}/>
                     <Input label="Email:" value={email} updateValue={setEmail}/>
                     <Input label="Foto de identificação:" value={image} updateValue={setImage}/>
-                    <Input label="Valor da comanda:" value={comanda} updateValue={setComanda}/>
+                    <Input label="Quarto:" value={comanda} updateValue={setComanda}/>
 
                 </form>
                 <button onClick={submit} className="btn-secondary">

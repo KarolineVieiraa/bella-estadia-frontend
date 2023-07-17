@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import './App.css'
-import { Card } from './components/card/card'
+import './App.css';
+import { Card } from './components/card/card';
 import { useHospedeData } from './hooks/useHospedeData';
 import { CreateModal } from './create-modal/create-modal';
-
+import pesquisa from "./imagens/icons8-barra-de-pesquisa-80 (1).png";
+import email from "./imagens/icons8-nova-mensagem-50.png";
+import user from "./imagens/icons8-usuário-homem-com-círculo-50.png";
+import principal from "./imagens/Cobre_Casa.png"
 
 function App() {
   const {data} = useHospedeData();
@@ -12,9 +15,15 @@ function App() {
   const handleOpenModal = () =>{
     setIsModalOpen(prev => !prev)
   }
+  
   return (
-    <div className = "container">
-      <h1>Bella Estadia</h1>
+  <div  className="titulo">
+    <div className='icones'>
+    <img src={pesquisa} alt="logohotel" className='pesquisa' />
+    <img src={principal} alt="logohotel" className='principal'/>
+    <img src={user} alt="logohotel" className='user' />
+    </div>
+      <div className = "container">
       <div className="card-grid">
         {data?.map(hospedeData => 
           <Card 
@@ -30,6 +39,11 @@ function App() {
       <button onClick={handleOpenModal}>Novo Hospede</button>
 
     </div>
+    <footer>
+      <img src={email} className='email'/>
+      <p>CONTATO: bella_estadia@gmail.com</p>
+    </footer>
+  </div>
   )
 }
 

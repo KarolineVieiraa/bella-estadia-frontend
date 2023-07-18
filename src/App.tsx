@@ -6,7 +6,7 @@ import { CreateModal } from './create-modal/create-modal';
 import pesquisa from "./imagens/icons8-barra-de-pesquisa-80 (1).png";
 import email from "./imagens/icons8-nova-mensagem-50.png";
 import user from "./imagens/icons8-usuário-homem-com-círculo-50.png";
-import principal from "./imagens/Cobre_Casa.png"
+import principal from "./imagens/Cobre_Casa_novo.png"
 
 function App() {
   const {data} = useHospedeData();
